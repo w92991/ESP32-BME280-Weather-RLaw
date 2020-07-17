@@ -60,5 +60,5 @@ void refresh_readings() {
   Serial.println(" m");   
   
   digitalWrite(LED_BUILTIN, LOW);
-  Serial.println("------------");   
+  Serial.println("-----v1-----");   
 }
