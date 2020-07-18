@@ -2,6 +2,7 @@
 #include "sensor_readings.h"
 #include "settings.h"    // The order is important!
 
+// bme is global to this file only
 Adafruit_BME280 bme;
 
 void setup() {
