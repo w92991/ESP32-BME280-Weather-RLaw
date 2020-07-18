@@ -40,7 +40,9 @@ void loop() {
   tft.setCursor(50, 50);
   
   tft.println(millis());
-  // refresh_readings(&bme);
-  refresh_readings(&bme, &tft);  // Passing the bme object to the function as bme is only "global" in this file.
+  // passing the bme object by value
+  // refresh_readings(bme);
+  // Passing the bme object by reference (a pointer: & means pass the address stored in the tft variable).
+  refresh_readings(&bme, &tft);  
   delay(2000);
 }
