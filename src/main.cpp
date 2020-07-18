@@ -37,7 +37,7 @@ void refresh_readings() {
   float f_altitude;
 
   digitalWrite(LED_BUILTIN, HIGH);
-
+  // bme is global to this file only
   f_temperature = bme.readTemperature();
   f_humidity = bme.readHumidity();
   f_pressure = bme.readPressure() / 100.0F;
