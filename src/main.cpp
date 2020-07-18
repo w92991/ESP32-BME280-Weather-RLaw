@@ -18,6 +18,7 @@ void setup() {
 }
 
 void loop() {
-  refresh_readings(bme);  // Passing the bme object to the function as bme is only "global" in this file.
+  // passing the bme object by value
+  refresh_readings(bme);
   delay(2000);
 }
