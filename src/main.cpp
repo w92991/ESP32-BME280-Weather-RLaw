@@ -37,6 +37,10 @@ void setup() {
 }
 
 void loop() {
-  refresh_readings(bme);  // Passing the bme object to the function as bme is only "global" in this file.
+  tft.setCursor(50, 50);
+  
+  tft.println(millis());
+  // refresh_readings(&bme);
+  refresh_readings(&bme, &tft);  // Passing the bme object to the function as bme is only "global" in this file.
   delay(2000);
 }
