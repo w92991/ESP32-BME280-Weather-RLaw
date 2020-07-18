@@ -58,7 +58,7 @@ void refresh_readings(Adafruit_BME280* bme, TFT_eSPI* tft) {
   Serial.println(" m");   
   tft->fillRect(5, 170, 200, 30, bg);
   tft->setCursor(5, 170);
-  tft->print(f_altitude);
+  tft->print(f_altitude); 
   tft->println(" m");
   
   //digitalWrite(LED_BUILTIN, LOW);
