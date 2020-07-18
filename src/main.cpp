@@ -10,6 +10,8 @@ void refresh_readings();  // Declare in the header so that the compiler knows ab
 #endif
 
 #define SEALEVELPRESSURE_HPA (1013.25)
+
+// bme is global to this file only
 Adafruit_BME280 bme; // I2C
 
 void setup() {
@@ -37,7 +39,6 @@ void refresh_readings() {
   float f_altitude;
 
   digitalWrite(LED_BUILTIN, HIGH);
-  // bme is global to this file only
   f_temperature = bme.readTemperature();
   f_humidity = bme.readHumidity();
   f_pressure = bme.readPressure() / 100.0F;
