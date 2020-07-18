@@ -1,26 +1,25 @@
 #include <Arduino.h>
 #include "sensor_readings.h"
+//#include "settings.h"
 
-// Passing the tft object by reference
+// Passing the bme and tft objects by reference
+// the * means that the parameter called bme will contain an address to the object of type Adafruit_BME280
 void refresh_readings(Adafruit_BME280* bme, TFT_eSPI* tft) {
   float f_temperature;
   float f_humidity;
   float f_pressure;
   float f_altitude;
 
-  //digitalWrite(LED_BUILTIN, HIGH); // If you enable this, the TFT will not work!!!
+  // If you set this, the TFT will not work!!!
+  //digitalWrite(LED_BUILTIN, HIGH); 
 
   uint16_t bg = TFT_BLACK;
   uint16_t fg = TFT_WHITE;
-  // tft->setTextColor(fg, bg);
-  // tft->setRotation(1);
 
-  // tft->fillScreen(bg);
-
+  // the -> symbol means to de-reference the pointer.
   tft->setCursor(5, 5);
   tft->setTextColor(fg, bg);
   tft->println("Right now...");
-
 
   f_temperature = bme->readTemperature();
   f_humidity    = bme->readHumidity();

@@ -10,5 +10,3 @@
 
 #endif
 
-#include "settings.h"
-
