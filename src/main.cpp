@@ -1,5 +1,5 @@
 // This is the master version of this project
-// This is another test of git pull
+// This is another test of gits pull
 // this is robbins change
 #include <Arduino.h>
 #include "sensor_readings.h"
