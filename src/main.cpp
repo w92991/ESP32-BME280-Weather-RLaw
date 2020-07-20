@@ -1,3 +1,4 @@
+// This is the master version of this project
 #include <Arduino.h>
 #include "sensor_readings.h"
 #include "settings.h"    // The order is important!
